@@ -1,120 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static%}
+{% load static %}
+{% load static %}
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Division Office Binan</title>
-    {% load static %}
-    <style>
-        /* Reset margin and padding for body and html */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            background-color: #f9f9f9;
-        }
-
-        /* Header Styles */
-        header {
-            background: url('{% static "images/bg.png" %}') no-repeat center center;
-            background-size: cover;
-            padding: 20px;
-            color: white;
-            width: 100vw;
-            height: auto;
-            box-sizing: border-box;
-        }
-
-        .container-fluid {
-            max-width: 1000px;
-            margin: 0;
-            padding-left: 0px;
-            padding-right: 0px;
-            margin-top: -90px;
-            margin-bottom: -50px;
-        }
-
-        .division_office_logo {
-            width: auto px;
-            height: 200px;
-            margin-left: 50px;
-            margin-top: 30px;
-            margin-right: -40px;
-        }
-
-        .header-row {
-             display: flex;
-             align-items: center;
-             justify-content: 0px;
-        }
-
-        .header-text {
-            text-align: left;
-            margin-top: 60px; /*Department margin top */
-
-        }
-
-        .header-text h1 {
-            font-family: 'Times New Roman';
-            font-weight: serif;
-            margin-bottom: 3px;
-            margin: 0;
-            padding-left: 0px;
-        }
-
-        .header-text h6 {
-            font-family: 'Times New Roman';
-            margin-top: 100px;
-        }
-
-        .header-hr {
-            width: 100%;
-            height: 5px;
-            background-color: white;
-            border: none;
-            margin-top: -1px;
-            margin-bottom: -21px
-        }
-
-        .facebook-plugin-container {
-            margin-left: 20px; /* Added margin on the left */
-            margin-top: 20px; /* Optional: Add margin on the top */
-        }
-    </style>
+    <title>DepEd | Division Biñan Office</title>
 </head>
-<body>
 
-    <!-- Header Section -->
     <header>
-        <div class="container-fluid">
-            <div class="header-row">
-                <img src="{% static 'images/DOB_LOGO.png' %}" alt="Logo" class="division_office_logo">
-                <div class="header-text">
-                    <h1><strong>DEPARTMENT OF EDUCATION</strong></h1>
-                    <hr class="header-hr">
-                    <h2><strong>City Schools Division of Biñan</strong></h2>
-                </div>
-            </div>
-        </div>
+       {% include 'header.html' %}
     </header>
+    <style>
 
-    <div class="facebook-plugin-container">
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0" nonce="AbsUraJY"></script>
+         body {
+             margin: 0; /* Remove default margin */
+             padding: 0; /* Remove default padding */
+             font-family: Arial, sans-serif; /* Set a default font */
+             }
 
-        <div class="fb-page"
-             data-href="https://www.facebook.com/depedtayobinan"
-             data-tabs="timeline"
-             data-width="500"
-             data-height="500"
-             data-small-header="true"
-             data-adapt-container-width="true"
-             data-hide-cover="true"
-             data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/depedtayobinan" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/depedtayobinan">DepEd Tayo Biñan City</a>
-            </blockquote>
+         .container {
+               margin: 0 auto; /* Center the container */
+               padding: 10px; /* Add padding inside the container */
+               max-width: 1200px; /* Set a maximum width for the container */
+         }
+
+
+
+
+
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            height: 500px; /* Adjust this value to set the desired height */
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+            height: 85%;
+            width: 100%;
+        }
+
+        .mySlides img {
+            height: 100%; /* Ensures the image fills the height of the container */
+            width: auto; /* Maintains aspect ratio */
+            display: block;
+            margin: auto; /* Centers the image horizontally */
+        }
+            /* Navigation Buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+            /* Navigation Bar Styles */
+.side-nav {
+    position: sticky;
+    top: 20px;
+    width: 200px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-top: -90px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.second-nav {
+    margin-top: 20px; /* Add margin to separate it from the first nav */
+}
+
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    margin: 10px 0;
+}
+
+.side-nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Aptos', sans-serif;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.side-nav a:hover {
+    color: blue;
+}
+
+.second-nav li:first-child {
+    font-weight: bold;
+    font-size: 18px; /* Adjust font size for the title */
+}
+
+/* Adjust wrapper for the side navigation */
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 40px; /* Adjust gap to provide space between nav and articles */
+}
+
+
+
+
+
+.DSDO_title {
+    width: 200px;
+    font-family: 'Aptos', sans-serif; /* Ensure font-family is correct */
+    font-weight: 700; /* Use '700' for bold text */
+    font-size: 12px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.DSO {
+    width: 200px;
+    font-family: 'Aptos', sans-serif; /* Ensure font-family is correct */
+    font-size: 12px;
+    text-align: left;
+    margin-top: -10px;
+}
+
+.nav-photo {
+     width: 200px; /* Default width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 30px; /* Space above the photo */
+}
+
+
+           .whats-new {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 240px;
+            margin-top: -765px;
+        }
+
+       .articles-container {
+     display: flex;
+     flex-direction: column; /* Arrange articles vertically */
+     gap: 20px; /* Space between articles */
+     align-items: center; /* Center the articles horizontally, if desired */
+     margin-top: -730px;
+     margin-left: -170px;
+        }
+
+        .article {
+            width: 530px; /* Set the width of each article */
+            height: 210px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: flex-end;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .article h2 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .article p {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .article-1 {
+            background-image: url('{% static "images/article_01.png" %}'); /* Replace with actual image */
+        }
+
+        .article-2 {
+            background-image: url('{% static "images/article_2.jpg" %}'); /* Replace with actual image */
+        }
+
+        .article-3 {
+            background-image: url('{% static "images/article_3.jpg" %}'); /* Replace with actual image */
+        }
+
+
+
+
+
+
+
+
+
+              .facebook-plugin-container {
+            width: 400px; /* Set the desired fixed width */
+            margin-left: auto;
+            margin-top: -750px;
+            float: right;
+        }
+
+        .fb-page {
+            width: 100%; /* Ensure the plugin content fills the container width */
+        }
+
+.article-2 a, .article-3 a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+}
+
+
+/* Ensure general link styling in articles is also considered */
+.article a {
+    color: white; /* Default link color inside articles */
+    text-decoration: none; /* Remove underline */
+}
+         .about_us {
+            display: flex;
+            max-width: 1200px;
+            margin-top: 30px;
+        }
+        .image-section {
+            width: 70%;
+            margin-right: 20px; /* Add space between image and text */
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+        .text-section {
+            width: 40%;
+            padding: 20px;
+            background-color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .text-section h1 {
+            margin-top: 0;
+            font-size: 36px;
+        }
+        .text-section p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+
+
+
+    </style>
+     <body>
+           {% include 'navigation.html' %}
+     <div class = "container">
+
+
+
+
+
+
+          <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{% static 'images/slide_1.png' %}" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'images/slide_2.png' %}" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'images/slide_3.png' %}" style="width:100%">
+        </div>
+
+        <!-- Navigation Buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+
+
+       <!-- Existing content omitted for brevity -->
+
+    <div class="wrapper">
+        <!-- Side Navigation -->
+        <div class="side-nav">
+            <ul>
+                <li><a href="#announcement">Announcement</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+            </ul>
         </div>
     </div>
+     <div class="side-nav second-nav">
+        <ul>
+            <li><strong>Useful Links</strong></li> <!-- Title text, not a link -->
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#bids">Bids Opportunities</a></li>
+            <li><a href="#division-memo">Division Memorandum</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-content">
+    <img src="{% static 'images/QR_code.png' %}" alt="Descriptive Text" class="nav-photo">
+
+    <div class="DSDO_title">
+        <h3><strong>DSDO Binan Client Satisfaction Measurement (CSM)</strong></h3>
+    </div>
+
+    <div class="DSO">
+        <p>The Client Satisfaction (CSM) tracks the customer experience of government offices. Your feedback on your recently concluded transaction will help this office provide better service. Personal information shared will be kept confidential and you always have the option to not answer this form.</p>
+        <p><strong>ANTI-RED TAPE AUTHORITY</strong></p>
+        <p>PSA Approval No. ARTA-2242-3</p>
+    </div>
+</div>
+
+
+         <div class="wrapper">
+             <div class="whats-new">What's New</div>
+
+    <div class="articles-container">
+        <a href="{% url 'articles' %}" class="article article-1">
+            <div>
+                <h2>Program Implementation Review and Plan Adjustments cum Strategic Planning for Fiscal Year 2024</h2>
+            </div>
+        </a>
+        <div class="article article-2">
+            <div>
+                <h2><a href="{% url 'articles' %}#article-2">125th Philippine Independence Day Celebration</a></h2>
+            </div>
+        </div>
+        <div class="article article-3">
+            <div>
+                <h2><a href="{% url 'articles' %}#article-3">SY 2022-2023 Total LIS Enrollment</a></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="facebook-plugin-container">
+   <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0" nonce="IeBvJJmp"></script>
+
+
+<div class="fb-page" data-href="https://www.facebook.com/depedtayobinan" data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/depedtayobinan" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/depedtayobinan">DepEd Tayo Biñan City</a></blockquote></div>
+</div>
+
+
+     <div class="about_us">
+    <div class="image-section">
+        {% load static %}
+        <img src="{% static 'images/about_us.png' %}" alt="Building Image">
+    </div>
+    <div class="text-section">
+        <h1>About Us</h1>
+        <p>This website is owned by DepEd Division of Biñan City which will communicate and engage the community and other stakeholders on the advocacy, programs and projects of the DepEd Organization. We strive to keep everyone informed and updated. Thank you.</p>
+    </div>
+     </div>
+
+
+     </div>
+     <script>
+               let slideIndex = 0;
+               showSlides();
+
+         function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+     </script>
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
 </body>
 </html>
