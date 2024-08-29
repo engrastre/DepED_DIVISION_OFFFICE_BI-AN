@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Articles</title>
+    <style>
+       body {
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+       }
+
+       .container {
+           margin: 0 auto;
+           padding: 10px;
+           max-width: 1200px;
+       }
+
+       .article-container {
+           display: block;
+           margin: 40px 0;
+           overflow: hidden;
+       }
+
+       .article-image {
+           float: left;
+           max-width: 400px;
+           height: auto;
+           margin-right: 20px;
+           margin-bottom: 20px;
+       }
+
+       .article-content {
+           overflow: hidden;
+       }
+
+       .article-title {
+           font-size: 22px;
+           margin-bottom: 10px;
+       }
+
+       .article-meta {
+           font-size: 10px;
+           color: #888;
+           margin-bottom: 20px;
+       }
+
+       .article-text {
+           font-size: 12px;
+           line-height: 1.5;
+           margin-top: 0;
+       }
+    </style>
+</head>
+
+<body>
+    <header> {% include 'header.html' %} </header>
+    {% include 'navigation.html' %}
+
+    <div class="container">
+
+        <!-- First Article -->
+        <section id="article-1" class="article-container">
+            <img src="{% static 'images/article_01.png' %}" alt="Program Implementation Review and Plan Adjustments Image" class="article-image">
+            <div class="article-content">
+                <h1 class="article-title">Program Implementation Review and Plan Adjustments cum Strategic Planning for Fiscal Year 2024</h1>
+                <p class="article-meta">By Edward R. Manuel / Aug. 19, 2024, 8:44 a.m.</p>
+                <p class="article-text">
+                    To systematically evaluate the implementation of various programs, projects, and activities (PPAs) of the three functional divisions of the SDO Biñan City held the Program Implementation Review and Plan Adjustments (PIRPA) last August 7-9, 2024, at Camp John Hay, Baguio City. It is a necessary undertaking to review if goals and performance targets are being met as specified in the Division Education Development Plan (DEDP), Annual Implementation Plan (AIP), and Work and Financial Plans (WFP). It likewise supports the institution’s commitment to provide the members of its organization with opportunities to link their achievements and make a meaningful contribution to the attainment of this institution’s Vision and Mission; promote individual and team growth, participation, and commitment; and grow professionally and personally.
+                </p>
+                <p class="article-text">
+                    The activity showcased the remarkable performance of the Division through the presentation of accomplishments of different offices and units from the Office of the Schools Division Superintendent (OSDS), School Governance and Operations Division (SGOD), and Curriculum Implementation Division (CID) vis-à-vis checking of alignment of different Programs, Projects, and Activities with the current Division Education Development Plan (DEDP) 2022-2028 and of the recent DepEd’s MATATAG Agenda.
+                </p>
+                <p class="article-text">
+                    The activity offered an opportunity for an open discussion of job expectations, key result areas, objectives, and how these are aligned to the overall division’s goals and targets. It provided an avenue for agreement on standards of performance of behaviors which leads to professional and personal growth in the organization.
+                </p>
+                <p class="article-text">
+                    The division crafted the strategic plan for the remaining months of the fiscal year and the continuation of different programs. Furthermore, gaps were acknowledged to be addressed and provide timely and relevant interventions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Second Article -->
+        <section id="article-2" class="article-container">
+            <img src="{% static 'images/article_2.jpg' %}" alt="125th Philippine Independence Day Celebration Image" class="article-image">
+            <div class="article-content">
+                <h1 class="article-title">125th Philippine Independence Day Celebration</h1>
+                <p class="article-meta">By Eva Joyce V. Cabantog / June 13, 2023, 12:38 p.m.</p>
+                <p class="article-text">
+                    The City Schools Division of Binan joined in the celebration of the 125th Philippine Independence Day on June 12, 2023. The division conducted a flag-raising and wreath-laying ceremony led by Schools Division Superintendent, Dr. Manuela S. Tolentino, CESO V. This annual commemoration highlights the significant contributions done by Filipino heroes as milestones of the country’s rich history. The activity was attended by Division officials and personnel and teachers from Biñan Elementary School headed by their School Principal, Ms. Pilar I. De Castro.
+                </p>
+            </div>
+        </section>
+
+        <!-- Third Article -->
+        <section id="article-3" class="article-container">
+            <img src="{% static 'images/article_03.png' %}" alt="SY 2022-2023 Total LIS Enrollment Image" class="article-image">
+            <div class="article-content">
+                <h1 class="article-title">SY 2022-2023 Total LIS Enrollment</h1>
+                <p class="article-meta">By Charles Patio / Jan. 2, 2023, 1:21 a.m.</p>
+                <p class="article-text">
+                    The DepEd Schools Division of Biñan City has registered a total of 88,255 student enrollees for SY 2022 – 2023 in both Public and Private Schools via LIS Enrolment, out of which we have 44,594 Male Students and 43,661 Female Students, further divided, as per Public and Private School Enrolment data we have: Public Schools - 5,845 students for Kinder, 33,202 for Elementary, 19,317 for JHS, and for SHS 1st Semester, 2,012 for G11, 2,063 for G12, a total of 62,439 enrollees for Public Schools. Private Schools – 1,291 students for Kinder, 7,964 for Elementary, 6,741 for JHS, and for SHS 1st Semester, 5,307 for G11, 4,513 for G12, a total of 25,816 enrollees for Private Schools. Total enrolment for Public and Private Schools: 88,255 enrollees.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>{% include 'footer.html' %}</footer>
+</body>
+</html>
