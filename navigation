@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    nav {
+        padding: 20px 0;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        margin-top: -25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu li {
+        margin: 0 3px;
+        position: relative;
+    }
+
+    .menu a {
+        color: black;
+        text-decoration: none;
+        font-family: Aptos, sans-serif;
+        padding: 14px 20px;
+    }
+
+    .menu a:hover {
+        color: blue;
+    }
+
+    .nav-line {
+        width: 85%;
+        height: 1.5px;
+        background-color: black;
+        margin: 0 auto;
+        margin-top: -25px;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        min-width: 360px;
+        list-style-type: none;
+    }
+
+    .dropdown a {
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-family: Aptos, sans-serif;
+    }
+
+    .dropdown a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Show dropdown on hover */
+       .menu li:hover .dropdown {
+        display: block;
+    }
+
+    /* Add arrow down */
+    .menu li a.about::after {
+        content: ' \25BC'; /* Unicode for down arrow */
+        font-size: 12px;
+        margin-left: 5px;
+    }
+</style>
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="{% url 'index' %}">HOME</a></li>
+            <li>
+                <a href="{% url 'about' %}" class="about">ABOUT</a>
+                <ul class="dropdown">
+                    <li><a href="{% url 'vision_mission' %}">Vision, Mission, Core Values, and Mandate</a></li>
+                    <li><a href="{% url 'citizens_charter' %}">Citizen's Charter</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'news' %}">NEWS</a></li>
+            <li><a href="{% url 'issuances' %}">ISSUANCES</a></li>
+            <li><a href="{% url 'qms' %}">QMS</a></li>
+            <li><a href="{% url 'procurement' %}">PROCUREMENT</a></li>
+            <li><a href="{% url 'learningresources' %}">LEARNING RESOURCES</a></li>
+            <li><a href="{% url 'research' %}">RESEARCH</a></li>
+            <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <div class="nav-line"></div>
+
+</body>
+</html>
