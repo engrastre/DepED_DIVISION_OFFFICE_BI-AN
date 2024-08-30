@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    /* Footer Styles */
+    footer {
+        background: url("{% static 'images/footer_bg.png' %}") no-repeat center center;
+        background-size: cover;
+        padding: 50px 30px;
+        color: #ffffff;
+        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        font-family: 'Canva Sans', sans-serif;
+    }
+
+        .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+        .contact-info {
+            font-size: 16px;
+            text-align: left;
+            margin-top: -60px;
+            position: relative;
+            z-index: 1;
+            line-height: 0.9;
+            margin-bottom: -60px;
+            margin-right: -85px;
+        }
+        .contact-info img.contact-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+            line-height: 0.9;
+        }
+        /* Middle section */
+        .middle-logos {
+            text-align: center;
+            flex: 1;
+            margin-top: -30px;
+            margin-bottom: -60px;
+            margin-right: -70px;
+        }
+        .logos-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer-logo {
+            width: 90px;
+            height: 80px;
+        }
+        .short-sentence {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+    /* Government Links Styles */
+    .government-links {
+        text-align: left;
+        margin-left: auto;
+        margin-top: -70px;
+        margin-bottom: -25px;
+    }
+
+    .government-links h5 {
+        font-size: 12px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .government-links ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .government-links ul li {
+        margin-bottom: 5px;
+        line-height: 0.9;
+    }
+
+    .government-links ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 11px;
+    }
+
+    .government-links ul li a:hover {
+        text-decoration: underline;
+    }
+    .copyright {
+            text-align: center;
+            background-color: #020059;
+            padding: -10px 0; /* Adjusted padding */
+            color: #ffffff;
+            border-radius: 5px;
+            width: 100%;
+            position: absolute; /* Changed to relative */
+            bottom: 0;
+            left: 0;
+            bo-sizing: border-box;
+            font-size: 14px;
+        }
+
+
+</style>
+<body>
+
+<div class="footer-container">
+     <!-- Contact Addresses -->
+    <div class="footer-section contact-info">
+            <p>For Contact:</p>
+            <p><img src="{% static 'images/email_logo.png' %}" alt="Email" class="contact-icon"> deped.binancity@deped.gov.ph</p>
+            <p><img src="{% static 'images/telephone_logo.png' %}" alt="Telephone" class="contact-icon"> 511 - 4143 | 511 - 8620</p>
+            <p><img src="{% static 'images/telephone_logo.png' %}" alt="Telephone" class="contact-icon"> 511 - 8746 | 511 - 4191</p>
+        </div>
+     <!-- Middle Section-->
+        <div class="footer-section middle-logos">
+            <div class="logos-container">
+                <img src="{% static 'images/DepEd_Matatag_logo.png' %}" alt="Logo 1" class="footer-logo">
+                <img src="{% static 'images/bagong_pilipinas_logo.png' %}" alt="Logo 2" class="footer-logo">
+                <img src="{% static 'images/DOB_LOGO.png' %}" alt="Logo 3" class="footer-logo">
+                <img src="{% static 'images/ISO.png' %}" alt="Logo 4" class="footer-logo">
+            </div>
+            <p class="short-sentence">All content is in the public domain unless otherwise stated.</p>
+        </div>
+    <!-- Government Links Section -->
+    <div class="footer-section government-links">
+        <h5>Government Links</h5>
+        <ul>
+            <li><a href="#">Office of the President</a></li>
+            <li><a href="#">Office of the Vice President</a></li>
+            <li><a href="#">Senate of the Philippines</a></li>
+            <li><a href="#">House of Representatives</a></li>
+            <li><a href="#">Supreme Court</a></li>
+            <li><a href="#">Court of Appeals</a></li>
+            <li><a href="#">Sandiganbayan</a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <p>&copy; DEPED | DIVISION BINAN</p>
+    </div>
+</div>
+
+
+
+</body>
+</html>
