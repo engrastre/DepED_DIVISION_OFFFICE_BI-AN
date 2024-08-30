@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background: url("{% static 'images/bg.png' %}") no-repeat center center;
+            background-size: cover;
+            height: 180px; /* Set the height of the header */
+            color: white;
+        }
+
+        .container-fluid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 300px;
+            padding-right: 10px;
+            height: 100%; /* Ensure the container fills the header height */
+            display: flex;
+            align-items: center;
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-left: -200px;
+        }
+
+        .header-text {
+            text-align: left;
+            flex: 1;
+            margin-left: 0;
+        }
+
+        .header-text h1 {
+            font-family: 'Times New Roman';
+            font-weight: serif;
+            font-size: 2.3vm;
+            margin-bottom: 3px;
+        }
+
+        .header-text h2 {
+            font-family: 'Times New Roman';
+            font-weight: serif;
+            font-size: 1.2vm;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+
+        .header-hr {
+            width: 471px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        .division_office_logo {
+            width: 150px;
+            height: auto;
+            margin-left: 0;
+        }
+
+        #time_container {
+            margin-top: 80px;
+            margin-left: 180px;
+            font-family: 'Aptos', sans-serif;
+            font-size: 1em;
+            text-align: right;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #time {
+            font-size: 0.9vm;
+        }
+
+        .seal_logo {
+            width: 130px;
+            height: auto;
+            margin-left: -10px;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="header-row">
+                <img src="{% static 'images/DOB_LOGO.png' %}" alt="Logo" class="division_office_logo">
+                <div class="header-text">
+                    <h1><strong>DEPARTMENT OF EDUCATION</strong></h1>
+                    <hr class="header-hr">
+                    <h2><strong>City Schools Division of Biñan</strong></h2>
+                </div>
+                <div id="time_container">
+                    <p>Philippines Standard Time:<br>
+                        <span id="time"></span>
+                    </p>
+                    <img src="{% static 'images/SEAL.png' %}" alt="Additional Logo" class="seal_logo">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = {
+                timeZone: 'Asia/Manila',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            const timeString = now.toLocaleString('en-PH', options);
+            document.getElementById('time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime(); // Initial call
+    </script>
+</body>
+</html>
