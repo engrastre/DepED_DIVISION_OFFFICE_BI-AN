@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>About</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
+
+        .container {
+            margin: 0 auto;
+            padding: 10px;
+            max-width: 1200px;
+            display: flex;
+            align-items: flex-start; /* Aligns the side navigation and content at the top */
+        }
+
+        .side-nav {
+            width: 1500px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            font-family: 'Aptos', sans-serif;
+            margin-right: 20px; /* Space between the side navigation and the content */
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .side-nav li {
+            margin-bottom: 15px;
+        }
+
+        .side-nav li:first-child {
+            font-weight: bold;
+            font-size: 18px; /* Adjust font size for the title */
+            margin-bottom: 10px;
+        }
+
+        .side-nav a {
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 16px;
+        }
+
+        .side-nav a:hover {
+            color: #002a80;
+            text-decoration: underline;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column; /* Stacks content vertically */
+            flex-grow: 1; /* Makes sure content takes up remaining space */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .content h2 {
+            color: #0044cc;
+            margin-top: 20px;
+        }
+
+        .content p, .content ul {
+            text-align: left; /* Ensures text is left-aligned */
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            padding-left: 20px;
+        }
+
+        .content ul li {
+            list-style-type: disc;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>{% include 'header.html' %}</header>
+    {% include 'navigation.html' %}
+    <div class="container">
+        <div class="side-nav">
+            <ul>
+                <li><strong>Quick Links</strong></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#core-values">Core Values</a></li>
+                <li><a href="#mandate">Mandate</a></li>
+                <br>
+                <br>
+                <li><strong>Useful Links</strong></li> <!-- Title text, not a link -->
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#bids">Bids Opportunities</a></li>
+                <li><a href="#division-memo">Division Memorandum</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <section id="vision">
+                <h2>The DepEd Vision</h2>
+                <p>
+                    We dream of Filipinos who passionately love their country and whose values and competencies enable them to realize their full potential and contribute meaningfully to building the nation. As a learner-centered public institution, the Department of Education continuously improves itself to better serve its stakeholders.
+                </p>
+            </section>
+
+            <section id="mission">
+                <h2>The DepEd Mission</h2>
+                <p>
+                    To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:
+                </p>
+                <ul>
+                    <li>Students learn in a child-friendly, gender-sensitive, safe, and motivating environment.</li>
+                    <li>Teachers facilitate learning and constantly nurture every learner.</li>
+                    <li>Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.</li>
+                    <li>Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.</li>
+                </ul>
+            </section>
+
+            <section id="core-values">
+                <h2>Core Values</h2>
+                <ul>
+                    <li>Maka-Diyos</li>
+                    <li>Maka-tao</li>
+                    <li>Makakalikasan</li>
+                    <li>Makabansa</li>
+                </ul>
+            </section>
+
+            <section id="mandate">
+                <h2>Our Mandate</h2>
+                <p>
+                    The Department of Education was established through the Education Decree of 1863 as the Superior Commission of Primary Instruction under a Chairman. The Education agency underwent many reorganization efforts in the 20th century in order to better define its purpose vis a vis the changing administrations and charters. The present day Department of Education was eventually mandated through Republic Act 9155, otherwise known as the Governance of Basic Education act of 2001 which establishes the mandate of this agency. The Department of Education (DepEd) formulates, implements, and coordinates policies, plans, programs and projects in the areas of formal and non-formal basic education. It supervises all elementary and secondary education institutions, including alternative learning systems, both public and private; and provides for the establishment and maintenance of a complete, adequate, and integrated system of basic education relevant to the goals of national development.
+                </p>
+            </section>
+        </div>
+    </div>
+    <footer>{% include 'footer.html' %}</footer>
+</body>
+</html>
