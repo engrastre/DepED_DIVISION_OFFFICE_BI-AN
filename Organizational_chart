@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+    <style>
+        .main-container {
+            display: flex;
+            align-items: flex-start;
+            margin: 0 auto;
+            padding: 10px;
+            max-width: 1200px;
+        }
+        .side-nav .title-link {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 10px;
+       }
+        .side-nav .title-link:hover {
+         color: #000;
+         text-decoration: none;
+       }
+
+        .side-nav {
+            width: 500px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            font-family: 'Aptos', sans-serif;
+            margin-right: 20px; /* Space between the side navigation and the image */
+            margin-left: -50px;
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .side-nav li {
+            margin-bottom: 15px;
+        }
+
+        .side-nav li:first-child {
+            font-weight: bold;
+            font-size: 18px; /* Adjust font size for the title */
+            margin-bottom: 10px;
+        }
+
+        .side-nav a {
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 16px;
+        }
+
+        .side-nav a:hover {
+            color: #161D6F;
+            text-decoration: none;
+        }
+
+        .image-container {
+            flex-shrink: 0;
+            margin-right: -50px;
+        }
+
+        .image-container img {
+            height: auto; /* Match height of the side-nav */
+            width: 1000px; /* Maintain aspect ratio */
+            display: block; /* Remove extra space below image */
+        }
+    </style>
+</head>
+<header>{% include 'header.html' %}</header>
+<body>
+    {% include 'navigation.html' %}
+<div class="main-container">
+    <div class="side-nav">
+        <ul>
+            <li><a href="#" class="title-link" data-image="{% static 'images/OFFICE-ORG-CHART.jpg' %}" data-title="Office of the Schools Division Superintendent" onclick="changeImage(event)">QUALITY MANAGEMENT SYSTEMS (QMS) TEAMS</a></li>
+            <li><a href="#" data-image="{% static 'images/DepEd_Policy.jfif' %}" data-title="DepEd Quality Policy Statement" onclick="changeImage(event)">DepEd Quality Policy Statement</a></li>
+            <br>
+            <li><a href="{% url 'OSDS' %}" >&nbsp;&nbsp;•&nbsp;OSDS</a></li>
+            <li><a href="#" >&nbsp;&nbsp;•&nbsp;CID</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;SGOD</a></li>
+            <br>
+            <br>
+            <li><strong>Useful Links</strong></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#bids">Bids Opportunities</a></li>
+            <li><a href="#division-memo">Division Memorandum</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="image-container">
+        <a id="lightboxLink" href="{% static 'images/OFFICE-ORG-CHART.jpg' %}" data-lightbox="image-gallery" data-title="Office of the Schools Division Superintendent">
+            <img id="mainImage" src="{% static 'images/OFFICE-ORG-CHART.jpg' %}" alt="Description of Image">
+        </a>
+    </div>
+</div>
+
+<footer>
+    {% include 'footer.html' %}
+</footer>
+
+<script>
+    function changeImage(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const imageUrl = event.target.getAttribute('data-image'); // Get the image URL from data attribute
+        const imageTitle = event.target.getAttribute('data-title'); // Get the image title from data attribute
+        const mainImage = document.getElementById('mainImage'); // Get the image element
+        const lightboxLink = document.getElementById('lightboxLink'); // Get the lightbox link element
+        mainImage.src = imageUrl; // Update the image source
+        lightboxLink.href = imageUrl; // Update the lightbox link href
+        lightboxLink.setAttribute('data-title', imageTitle); // Update the title in the lightbox
+    }
+</script>
+
+</body>
+</html>
