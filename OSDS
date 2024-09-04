@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<style>
+    .main-container {
+        display: flex;
+        align-items: flex-start;
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 1200px;
+        marin-right: -40px;
+
+
+    }
+
+    .side-nav {
+        width: 750px;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        font-family: 'Aptos', sans-serif;
+        margin-right: 15px; /* Space between the side navigation and the image */
+        margin-left: -80px;
+
+
+    }
+
+    .side-nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .side-nav li {
+        margin-bottom: 15px;
+    }
+
+    .side-nav li:first-child {
+        font-weight: bold;
+        font-size: 18px; /* Adjust font size for the title */
+        margin-bottom: 10px;
+    }
+
+    .side-nav a {
+        text-decoration: none;
+        color: #0044cc;
+        font-size: 16px;
+    }
+
+    .side-nav a:hover {
+        color: #161D6F;
+        text-decoration: none;
+    }
+
+    .image-container {
+        flex-shrink: 0; /* Prevent shrinking */
+        margin-right: -80px;
+    }
+
+    .image-container img {
+        height: auto; /* Match height of the side-nav */
+        width: 1000px; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below image */
+    }
+</style>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+</head>
+<header>{% include 'header.html' %}</header>
+<body>
+    {% include 'navigation.html' %}
+
+<div class="main-container">
+    <div class="side-nav">
+        <ul>
+            <li><strong>QUALITY MANAGEMENT SYSTEMS (QMS) TEAMS</strong></li>
+            <li><a href="#" data-image="{% static 'images/DepEd_Policy.jfif' %}" data-title="DepEd Quality Policy Statement" onclick="changeImage(event)">DepEd Quality Policy Statement</a></li>
+            <br>
+             <li><strong>OFFICE OF THE SCHOOLS DIVISION SUPERINTENDENT</strong></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Administrative Services Section</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Assistant Schools Division Superintendent</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Finanace Services Section</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Cash Unit</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;ICT Services Section</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Legal Services Section</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Personnel Unit</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Records Unit</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Property and Supply Unit</a></li>
+            <li><a href="#">&nbsp;&nbsp;•&nbsp;Office of the Schools Divison Superintendent</a></li>
+            <br>
+            <br>
+            <li><strong>Useful Links</strong></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#bids">Bids Opportunities</a></li>
+            <li><a href="#division-memo">Division Memorandum</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="image-container">
+        <a href="{% static 'images/OFFICE-ORG-CHART.jpg' %}" data-lightbox="image-gallery" data-title="Office of the Schools Division Superintendent">
+            <img src="{% static 'images/OFFICE-ORG-CHART.jpg' %}" alt="Description of Image">
+        </a>
+    </div>
+</div>
+
+<footer>
+    {% include 'footer.html' %}
+</footer>
+</body>
+</html>
