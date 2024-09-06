@@ -7,10 +7,15 @@
 <head>
     <title>DepEd | Division Biñan Office</title>
 </head>
-
     <header>
        {% include 'header.html' %}
     </header>
+
+<!-- Lightbox CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <!-- Lightbox JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+
     <style>
 
          body {
@@ -27,30 +32,37 @@
 
 
 
-
-
-        /* Slideshow Styles */
-        .slideshow-container {
+/* Slideshow Styles */
+           .main-slideshow-container{
             position: relative;
             max-width: 100%;
             height: 500px; /* Adjust this value to set the desired height */
             margin-top: 10px;
             overflow: hidden;
         }
+        .announcement-slideshow-container {
+           position: relative;
+            max-width: 100%;
+            height: 350px; /* Adjust this value to set the desired height */
+            margin-top: 10px;
+            overflow: hidden;
+            marin-bottom: -990px;
+        }
 
-        .mySlides {
+        .slide {
             display: none;
-            height: 85%;
+            height: 100%; /* Ensures the slideshow fills its container */
             width: 100%;
         }
 
-        .mySlides img {
-            height: 100%; /* Ensures the image fills the height of the container */
-            width: auto; /* Maintains aspect ratio */
+        .slide img {
+            width: 100%; /* Ensure image fills the width of the container */
+            height: 100%; /* Ensure image fills the height of the container */
             display: block;
-            margin: auto; /* Centers the image horizontally */
+            margin: auto; /* Center image horizontally */
         }
-            /* Navigation Buttons */
+
+        /* Navigation Buttons */
         .prev, .next {
             cursor: pointer;
             position: absolute;
@@ -64,7 +76,6 @@
             transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
-
         }
 
         .next {
@@ -75,6 +86,30 @@
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+
+        .slideshow_and_embedFB_container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Aligns both items to the right */
+            margin: 10px;
+        }
+
+        .announcement-slideshow-container {
+            width: 350px;
+            margin-top: -865px;
+        }
+        .facebook-plugin-container {
+          width: 350px;
+            margin-top: 10px;
+
+
+        }
+
+        .facebook-plugin-container .fb-page {
+            width: 100%; /* Ensure the plugin content fills the container width */
+        }
+
+
             /* Navigation Bar Styles */
 .side-nav {
     position: sticky;
@@ -83,7 +118,6 @@
     padding: 10px;
     background-color: #f0f0f0;
     border-radius: 8px;
-    margin-top: -90px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -134,12 +168,19 @@
     width: 200px;
     font-family: 'Aptos', sans-serif; /* Ensure font-family is correct */
     font-weight: 700; /* Use '700' for bold text */
-    font-size: 12px;
-    text-align: center;
+    font-size: 18px;
+    text-align: left;
     margin-top: -10px;
 }
 
 .DSO {
+    width: 200px;
+    font-family: 'Aptos', sans-serif; /* Ensure font-family is correct */
+    font-size: 15px;
+    text-align: left;
+    margin-top: -10px;
+}
+.anti {
     width: 200px;
     font-family: 'Aptos', sans-serif; /* Ensure font-family is correct */
     font-size: 12px;
@@ -158,7 +199,7 @@
             font-size: 24px;
             font-weight: bold;
             margin-left: 240px;
-            margin-top: -765px;
+            margin-top: -893px;
         }
 
        .articles-container {
@@ -166,13 +207,13 @@
      flex-direction: column; /* Arrange articles vertically */
      gap: 20px; /* Space between articles */
      align-items: center; /* Center the articles horizontally, if desired */
-     margin-top: -730px;
+     margin-top: -850px;
      margin-left: -170px;
         }
 
         .article {
             width: 530px; /* Set the width of each article */
-            height: 210px;
+            height: 180px;
             background-size: cover;
             background-position: center;
             color: white;
@@ -208,25 +249,18 @@
         .article-3 {
             background-image: url('{% static "images/article_3.jpg" %}'); /* Replace with actual image */
         }
-
-
-
-
-
-
-
-
-
-              .facebook-plugin-container {
-            width: 400px; /* Set the desired fixed width */
-            margin-left: auto;
-            margin-top: -750px;
-            float: right;
+        .article-4 {
+            background-image: url('{% static "images/article_3.jpg" %}'); /* Replace with actual image */
         }
 
-        .fb-page {
-            width: 100%; /* Ensure the plugin content fills the container width */
-        }
+
+
+
+
+
+
+
+
 
 .article-2 a, .article-3 a {
     color: white;
@@ -267,37 +301,36 @@
         .text-section p {
             font-size: 18px;
             line-height: 1.5;
-        }
-
-
 
 
     </style>
      <body>
            {% include 'navigation.html' %}
      <div class = "container">
+  <div class="container">
+        <!-- Main Slideshow Section -->
+        <div class="main-slideshow-container">
+            <div class="slide main-slide fade">
+                <img src="{% static 'images/slide_1.png' %}">
+            </div>
+            <div class="slide main-slide fade">
+                <img src="{% static 'images/slide_2.png' %}">
+            </div>
+            <div class="slide main-slide fade">
+                <img src="{% static 'images/slide_3.png' %}">
+            </div>
 
-
-
-
-
-
-          <!-- Slideshow Section -->
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="{% static 'images/slide_1.png' %}" style="width:100%">
+            <!-- Navigation Buttons -->
+            <a class="prev" onclick="plusSlides(-1, 'main')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'main')">&#10095;</a>
         </div>
-        <div class="mySlides fade">
-            <img src="{% static 'images/slide_2.png' %}" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="{% static 'images/slide_3.png' %}" style="width:100%">
-        </div>
 
-        <!-- Navigation Buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
+
+
+
+
+
+
 
 
 
@@ -333,8 +366,10 @@
 
     <div class="DSO">
         <p>The Client Satisfaction (CSM) tracks the customer experience of government offices. Your feedback on your recently concluded transaction will help this office provide better service. Personal information shared will be kept confidential and you always have the option to not answer this form.</p>
+        <div class="anti">
         <p><strong>ANTI-RED TAPE AUTHORITY</strong></p>
         <p>PSA Approval No. ARTA-2242-3</p>
+        </div>
     </div>
 </div>
 
@@ -358,54 +393,95 @@
                 <h2><a href="{% url 'articles' %}#article-3">SY 2022-2023 Total LIS Enrollment</a></h2>
             </div>
         </div>
+        <div class="article article-4">
+            <div>
+                <h2><a href="{% url 'articles' %}#article-3">SY 2022-2023 Total LIS Enrollment</a></h2>
+            </div>
+        </div>
     </div>
 </div>
 
 
+       <!-- Container for announcement slideshow and Facebook plugin -->
+        <div class="slideshow_and_embedFB_container">
+            <!-- Announcement Slideshow Section -->
+            <div class="announcement-slideshow-container">
+                <div class="slide announcement-slide fade">
+                    <a href="{% static 'images/national.jpg' %}" data-lightbox="announcement">
+                        <img src="{% static 'images/national.jpg' %}">
+                    </a>
+                </div>
+                <div class="slide announcement-slide fade">
+                    <a href="{% static 'images/pasok.jfif' %}" data-lightbox="announcement">
+                        <img src="{% static 'images/pasok.jfif' %}">
+                    </a>
+                </div>
+                <div class="slide announcement-slide fade">
+                    <a href="{% static 'images/announcement.jfif' %}" data-lightbox="announcement">
+                        <img src="{% static 'images/announcement.jfif' %}">
+                    </a>
+                </div>
 
-<div class="facebook-plugin-container">
-   <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0" nonce="IeBvJJmp"></script>
+                <!-- Navigation Buttons -->
+                <a class="prev" onclick="plusSlides(-1, 'announcement')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'announcement')">&#10095;</a>
+            </div>
+
+            <!-- Facebook Plugin Section -->
+            <div class="facebook-plugin-container">
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0" nonce="IeBvJJmp"></script>
+                <div class="fb-page" data-href="https://www.facebook.com/depedtayobinan" data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/depedtayobinan" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/depedtayobinan">DepEd Tayo Biñan City</a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+  </div>
 
 
-<div class="fb-page" data-href="https://www.facebook.com/depedtayobinan" data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/depedtayobinan" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/depedtayobinan">DepEd Tayo Biñan City</a></blockquote></div>
-</div>
 
 
-     <div class="about_us">
-    <div class="image-section">
-        {% load static %}
-        <img src="{% static 'images/about_us.png' %}" alt="Building Image">
-    </div>
-    <div class="text-section">
-        <h1>About Us</h1>
-        <p>This website is owned by DepEd Division of Biñan City which will communicate and engage the community and other stakeholders on the advocacy, programs and projects of the DepEd Organization. We strive to keep everyone informed and updated. Thank you.</p>
-    </div>
-     </div>
 
+
+
+  <br>
 
      </div>
      <script>
-               let slideIndex = 0;
-               showSlides();
+               // Initialize slide indices for both slideshows
+        let slideIndex = {
+            main: 0,
+            announcement: 0
+        };
 
-         function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
+        function showSlides(slideshowClass, type) {
+            let slides = document.getElementsByClassName(slideshowClass);
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
+            slideIndex[type]++;
+            if (slideIndex[type] > slides.length) {
+                slideIndex[type] = 1;
             }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+            slides[slideIndex[type] - 1].style.display = "block";
+            setTimeout(() => showSlides(slideshowClass, type), 3000); // Change slide every 3 seconds
         }
 
-        function plusSlides(n) {
-            slideIndex += n;
-            showSlides();
+        function plusSlides(n, type) {
+            let slideshowClass = type === 'main' ? 'main-slide' : 'announcement-slide';
+            let slides = document.getElementsByClassName(slideshowClass);
+            slideIndex[type] += n;
+            if (slideIndex[type] > slides.length) { slideIndex[type] = 1 }
+            if (slideIndex[type] < 1) { slideIndex[type] = slides.length }
+            showSlides(slideshowClass, type);
         }
+
+        // Start both slideshows
+        showSlides('main-slide', 'main');
+        showSlides('announcement-slide', 'announcement');
 
      </script>
     <footer>
