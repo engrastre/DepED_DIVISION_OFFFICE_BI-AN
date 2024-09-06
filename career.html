@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load static %}
+{% load static %}
+{% load static %}
+{% load static %}
+<head>
+    <title>DEPED | CAREERS</title>
+    <header>
+       {% include 'header.html' %}
+    </header>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
+        body {
+            font-family: 'Aptos', sans-serif;
+        }
+        .container {
+               margin: 0 auto;
+               padding: 10px;
+               max-width: 1200px;
+         }
+         .side-nav {
+            width: 200px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            font-family: 'Aptos', sans-serif;
+            margin-right: 10px; /* Space between the side navigation and the content */
+            margin-left: -40px;
+            margin-top: 20px;
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .side-nav li {
+            margin-bottom: 15px;
+        }
+
+        .side-nav li:first-child {
+            font-weight: bold;
+            font-size: 18px; /* Adjust font size for the title */
+            margin-bottom: 10px;
+        }
+
+        .side-nav a {
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 16px;
+        }
+
+        .side-nav a:hover {
+            color: #002a80;
+            text-decoration: underline;
+        }
+        .table-container{
+        margin-left: 210px;
+        margin-right: -40px;
+        margin-top: -210px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px; /* Space between title and table */
+        }
+
+        th, td {
+            border: 1px solid black; /* Basic border */
+            padding: 4px; /* Minimal padding */
+            text-align: left; /* Align text to the left */
+        }
+
+        th {
+            font-weight: normal;
+        }
+
+        /* Title styling */
+        .title-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+        }
+
+        .title-container::before {
+            content: "";
+            display: block;
+            width: 5px; /* Width of the line */
+            height: 40px; /* Height of the line */
+            background-color: navy; /* Navy blue color for the line */
+            margin-right: 10px; /* Space between line and title */
+        }
+
+        .title {
+            font-size: 24px; /* Size of the title text */
+            font-weight: bold; /* Bold text for the title */
+        }
+
+        /* Link styling */
+        .view-link {
+            color: blue; /* Link color */
+            text-decoration: none; /* Remove underline */
+            font-size: 14px; /* Font size for the link */
+        }
+
+        .view-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        .center-col{
+            text-align: center; /* Center content horizontally */
+        }
+
+
+
+    </style>
+</head>
+<body>
+{% include 'navigation.html' %}
+ <div class = "container">
+       <div class="side-nav">
+            <ul>
+                <li><strong>Useful Links</strong></li> <!-- Title text, not a link -->
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#bids">Bids Opportunities</a></li>
+                <li><a href="#division-memo">Division Memorandum</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+ <div class="table-container">
+    <div class="title-container">
+        <div class="title">CAREERS</div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Position</th>
+                <th>Item&nbsp;No.</th>
+                <th>Salary&nbsp;Grade</th>
+                <th>Salary</th>
+                <th>Place of Assignment</th>
+                <th>Date Posted</th>
+                <th>Closed Date</th>
+                <th>View</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- Anything about Row 1 -->
+            <tr>
+                <td class="center-col">1</td>
+                <td>EducationProgramSpecialsit&nbsp;II.</td>
+                <td>OSEC-DECSB-EPS2-270002-2016</td>
+                <td>16</td>
+                <td>PHP 39, 672.00</td>
+                <td>DepEd Division of Biñan City - SGOD(SocMob)</td>
+                <td>Aug. 30, 2024, 4:05pm</td>
+                <td>Sep. 9, 2024, 5:00pm</td>
+              <td class="center-col"><a href="{% static 'pdf_files/DM_No._293_s._2024_Announcement_of_Vacancy.pdf' %}" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">2</td>
+                <td>Guidance Conselor I.</td>
+                <td>OSEC-DECSB-GUIDC1-270929-2010 OSEC-DECSB-GUIDC1-270017-2009</td>
+                <td>11</td>
+                <td>PHP 27,000.00</td>
+                <td>DepEd Division of Biñan City - BSSAA and NRJNHS</td>
+                <td>Aug. 22, 2024, 1:52pm</td>
+                <td>Aug. 30, 2024, 4:00pm</td>
+                <td class="center-col"><a href="{% static 'pdf_files/DM_No._289_s._2024_Announcement_of_Vacancy_Ij09nyb.pdf' %}" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">3</td>
+                <td>Guidance Counselor II.</td>
+                <td>OSEC-DECSB-GUIDC2-270106-2016 OSEC-DECSB-GUIDC2-270107-2016 OSEC-DECSB-GUIDC2-270108-2016</td>
+                <td>12</td>
+                <td>PHP 29,165.00</td>
+                <td>DepEd Division of Biñan City - Senior High School</td>
+                <td>Aug. 22, 2024, 1:52pm</td>
+                <td>Aug. 30, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">4</td>
+                <td>Guidance Counselor III.</td>
+                <td>OSEC-DECSB-GUIDC3-270043-2020</td>
+                <td>13</td>
+                <td>PHP 31,320.00</td>
+                <td>DepEd Division of Biñan City - Junior High School</td>
+                <td>Aug. 22, 2024, 1:52pm</td>
+                <td>Aug. 30, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">5</td>
+                <td>Assistant School Principal II.</td>
+                <td>OSEC-DECSB-ASP2-270325-2016</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City - Senior High School</td>
+                <td>Aug. 22, 2024, 1:52pm</td>
+                <td>Aug. 30, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+             <tr>
+                <td class="center-col">6</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270666-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City - Elementary</td>
+                <td>Aug. 22, 2024, 1:52pm</td>
+                <td>Aug. 30, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">7</td>
+                <td>School Principal II.</td>
+                <td>OSEC-DECSB-SP2-270278-2022 OSEC-DECSB-SP2-270304-2016 OSEC-DECSB-SP2-270315-2016</td>
+                <td>20</td>
+                <td>PHP 57,347.00</td>
+                <td>DepEd Division of Biñan City - Senior High School</td>
+                <td>Aug. 22, 2024, 1:52pm</td>
+                <td>Aug. 30, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">8</td>
+                <td>School Principal IV.</td>
+                <td>OSEC-DECSB-SP4-270044-2022</td>
+                <td>22</td>
+                <td>PHP 71,511.00</td>
+                <td>DepEd Division of Biñan City - Elementary</td>
+                <td>Aug. 22, 2024, 1:52pm</td>
+                <td>Aug. 30, 2024, 5 pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">9</td>
+                <td>Administrative Officer II.</td>
+                <td>OSEC-DECSB-ADOF2-270193-2020</td>
+                <td>11</td>
+                <td>PHP 27, 000.00</td>
+                <td>DepEd Division Biñan City</td>
+                <td>June 14, 2024, 3:09pm</td>
+                <td>June 20, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+             <tr>
+                <td class="center-col">10</td>
+                <td>Librarian II.</td>
+                <td>OSEC-DECSB-LIB2-270003-2016</td>
+                <td>15</td>
+                <td>PHP 36,619.00	DepEd</td>
+                <td> Division Biñan City</td>
+                <td>June 14, 2024, 3:09pm</td>
+                <td>June 20, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                    <tr>
+                <td class="center-col">11</td>
+                <td>Administrative Aide VI</td>
+                <td>OSEC-DECSB-ADA6-270014-2016 OSEC-DECSB-ADA6-270020-2016</td>
+                <td>6</td>
+                <td>PHP 17,553,.00</td>
+                <td>DepEd Division Biñan City</td>
+                <td>May 14, 2024, 10:31am</td>
+                <td>May 24, 2024, 5 pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                    <tr>
+                <td class="center-col">12</td>
+                <td>Administrative Assistant II.</td>
+                <td>OSEC-DECSB-ADAS2-270023-2016 OSEC-DECSB-ADAS2-270088-2018</td>
+                <td>8</td>
+                <td>PHP 19,744.00</td>
+                <td>DepEd Division Biñan City (Senior High School)</td>
+                <td>May 14, 2024, 10:31am</td>
+                <td>May 24, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                    <tr>
+                <td class="center-col">13</td>
+                <td>Administrative Assistant III.</td>
+                <td>OSEC-DECSB-ADAS3-2700066-2018 OSEC-DECSB-ADAS3-2700068-2018 OSEC-DECSB-ADAS3-2700024-2016</td>
+                <td>9</td>
+                <td>PHP 21,211.00</td>
+                <td>DepEd Division Biñan City</td>
+                <td>May 14, 2024, 10:31 a.m.</td>
+                <td>May 24, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                    <tr>
+                <td class="center-col">14</td>
+                <td>Education Program Specialist II.</td>
+                <td>OSEC-DECSB-EPS2-270004-2016 OSEC-DECSB-EPS2-270006-2016</td>
+                <td>16</td>
+                <td>PHP 39,672.00</td>
+                <td>DepEd Division Biñan City</td>
+                <td>May 14, 2024, 10:31am</td>
+                <td>May 24, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">15</td>
+                <td>Medical Officer III.</td>
+                <td>OSEC-DECSB-MDOF3-270027-2017</td>
+                <td>21</td>
+                <td>PHP 63,672.00</td>
+                <td>DepEd Division Biñan City</td>
+                <td>May 14, 2024, 10:30am</td>
+                <td>May 24, 2024, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+             <tr>
+                <td class="center-col">16</td>
+                <td>Education Program Supervisor (English).</td>
+                <td>OSEC-DECSB-EPSVR</td>
+                <td>22</td>
+                <td>PHP 71,511.00</td>
+                <td>DepEd City Schools Division of Biñan (CID)</td>
+                <td>June 16, 2023, 5:00pm</td>
+                <td>June 26, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">17</td>
+                <td>Master Teacher 1 (Elementary).</td>
+                <td>OSEC-DECSB-MTCHR1-241052-1998 OSEC-DECSB-MTCHR1-241059-1998 OSEC-DECSB-MTCHR1-241060-1998</td>
+                <td>18</td>
+                <td>PHP 46,725.00</td>
+                <td>DepEd Division of Biñan City - Elementary</td>
+                <td>June 6, 2023, 2:53pm</td>
+                <td>June 15, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">18</td>
+                <td>Master Teacher II (Elementary).</td>
+                <td>OSEC-DECSB-MTCHR2-240672-1998 OSEC-DECSB-MTCHR2-270004-2010</td>
+                       <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City - Elementary</td>
+                <td>June 6, 2023, 2:52pm</td>
+                <td>June 15, 2023, 5:00pm</td>
+
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">19</td>
+                <td>Administrative Aide VI.</td>
+                <td>OSEC-DECSB-ADA6-270017-2016</td>
+                <td>6</td>
+                <td>PHP 17,553.00</td>
+                <td>DepEd Division of Biñan City</td>
+                <td>May 22, 2023, 10:17am</td>
+                <td>May 26, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">20</td>
+                <td>Administrative Assistant II.</td>
+                <td>OSEC-DECSB-ADAS2-270022-2016 OSEC-DECSB-ADAS2-270292-2016 OSEC-DECSB-ADAS2-270293-2016</td>
+                <td>8</td>
+                <td>PHP 19,744.00</td>
+                <td>DepEd Division of Biñan City- Senior High School</td>
+                <td>May 22, 2023, 10:17am</td>
+                <td>May 26, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">21</td>
+                <td>Administrative Assistant III.</td>
+                <td>OSEC-DECSB-ADAS3-270077-2018</td>
+                <td>9</td>
+                <td>PHP 21,211.00</td>
+                <td>DepEd Division of Biñan City</td>
+                <td>May 22, 2023, 10:17am</td>
+                <td>May 26, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">22</td>
+                <td>Administrative Officer II.</td>
+                <td>OSEC-DECSB-ADOF2-270183-2020</td>
+                <td>11</td>
+                <td>PHP 27,000.00</td>
+                <td>DepEd Division of Biñan City - Elementary</td>
+                <td>May 22, 2023, 10:17am</td>
+                <td>May 26, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">23</td>
+                <td>Public School District Supervisor.</td>
+                <td>OSEC-DECSB-PSDS-270008-2016</td>
+                <td>22</td>
+                <td>PHP 71, 511.00</td>
+                <td>DepEd City Schools Division of Biñan City</td>
+                <td>April 28, 2023, 11:58am</td>
+                <td>May 5, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">24</td>
+                <td>Education Program Supervisor (English)</td>
+                <td>OSEC-DECSB-EPSVR-270013-2016</td>
+                <td>22</td>
+                <td>PHP 71, 511.OO</td>
+                <td>DepEd City Schools Division of Biñan City (CID)	</td>
+                <td>April 28, 2023, 11:58am</td>
+                <td>May 5, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">25</td>
+                <td>Administrative Aide VI.</td>
+                <td>OSEC-DECSB-ADA6-270017-2016</td>
+                <td>6</td>
+                <td>PHP 17,553.00</td>
+                <td>DepEd Division of Biñan City</td>
+                <td>Feb. 28, 2023, 10:02am</td>
+                <td>March 6, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">26</td>
+                <td>Administrative Assistant II.</td>
+                <td>OSEC-DECSB-ADAS2-270022-2016 OSEC-DECSB-ADAS2-270292-2016 OSEC-DECSB-ADAS2-270293-2016</td>
+                <td>8</td>
+                <td>PHP 19,744.00</td>
+                <td>DepEd Division of Biñan City - Senior High School</td>
+                <td>Feb. 28, 2023, 10:02am</td>
+                <td>March 6, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+             <tr>
+                <td class="center-col">27</td>
+                <td>Administrative Assistant III.</td>
+                <td>OSEC-DECSB-ADAS3-270077-2018</td>
+                <td>9</td>
+                <td>PHP 21,211.00</td>
+                <td>DepEd Division of Biñan City</td>
+                <td>Feb. 28, 2023, 10:02am</td>
+                <td>March 6, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">28</td>
+                <td>Administrative Officer II.</td>
+                <td>OSEC-DECSB-ADOF2-270183-2020</td>
+                <td>11</td>
+                <td>PHP 27,000.00</td>
+                <td>DepEd Division of Biñan City - Elementary</td>
+                <td>Feb. 28, 2023, 10:02 am</td>
+                <td>March 6, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">29</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270665-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:57am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">30</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270666-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">31</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270648-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">32</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270635-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">33</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270585-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">34</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270567-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+
+                   <tr>
+                <td class="center-col">35</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270567-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">36</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270546-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">37</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270541-2014</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+
+                   <tr>
+                <td class="center-col">38</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270047-2014</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (Elementary)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+
+                   <tr>
+                <td class="center-col">39</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">40</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270539-2010</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                   <tr>
+                <td class="center-col">41</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270051-2014</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">41</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270050-2014</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+         <tr>
+                <td class="center-col">42</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270049-2014</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                 <tr>
+                <td class="center-col">43</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270048-2014</td>
+                <td>19</td>
+                <td>PHP 51,357.00</td>
+                <td>DepEd Division of Biñan City (ELEMENTARY)</td>
+                <td>Jan. 18, 2023, 9:47am</td>
+                <td>Jan. 27, 2023, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                 <tr>
+                <td class="center-col">44</td>
+                <td>School Principal I.</td>
+                <td>OSEC-DECSB-SP1-270043-2014</td>
+                <td>19</td>
+                <td>PHP 49,835.00</td>
+                <td>DepEd Division of Biñan City (Secondary)</td>
+                <td>Dec. 7, 2022, 4:40pm</td>
+                <td>Dec. 12, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                 <tr>
+                <td class="center-col">45</td>
+                <td>Assistant School Principal II (SHS).</td>
+                <td>OSEC-DECSB-270325-2016</td>
+                <td>19</td>
+                <td>PHP 49,835.00</td>
+                <td>DepEd Division of Biñan City (Senior High School)</td>
+                <td>Dec. 7, 2022, 4:40pm</td>
+                <td>Dec. 12, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+
+                 <tr>
+                <td class="center-col">46</td>
+                <td>Registrar I.</td>
+                <td>OSEC-DECSB-R1-270178-2016</td>
+                <td>11</td>
+                <td>PHP 25,439.00</td>
+                <td>Division of Biñan City Saint Francis Integrated National High School (SHS)</td>
+                <td>Nov. 3, 2022, 2:55 pm</td>
+                <td>Nov. 14, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                 <tr>
+                <td class="center-col">47</td>
+                <td>Master Teacher I (SHS TVL Track Tech-Voc).</td>
+                <td>OSEC-DECSB-MTCHR1-270297</td>
+                <td>18</td>
+                <td>45,203.00</td>
+                <td>Division of Biñan City SHS (Biñan City Senior High School San Antonio Campus)</td>
+                <td>Nov. 3, 2022, 2:55pm</td>
+                <td>Nov. 14, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+                 <tr>
+                <td class="center-col">48</td>
+                <td>Master Teacher II (SHS Academic Track - ABM).</td>
+                <td>OSEC-DECSB-MTCHR1-270226-2016</td>
+                <td>19</td>
+                <td>49,835.00</td>
+                <td>Division of Biñan City SHS (Biñan Integrated Nartional High School)</td>
+                <td>Nov. 3, 2022, 2:55 p.m.</td>
+                <td>Nov. 14, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+             <tr>
+                <td class="center-col">49</td>
+                <td>Master Teacher II (SHS Academic Track - Filipino).</td>
+                <td>OSEC-DECSB-MTCHR1-270236-2016</td>
+                <td>19</td>
+                <td>PHP 49,835.00</td>
+                <td>Division of Biñan City SHS (Biñan Integrated National High School)</td>
+                <td>Nov. 3, 2022, 2:55pm</td>
+                <td>Nov. 14, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+             <tr>
+                <td class="center-col">50</td>
+                <td>Master Teacher I (SHS Academic Track - Science).</td>
+                <td>OSEC-DECSB-MTCHR1-270297</td>
+                <td>18</td>
+                <td>PHP 45,203.00</td>
+                <td>Division of Biñan City SHS (Biñan Integrated National High School)</td>
+                <td>Nov. 3, 2022, 2:55pm</td>
+                <td>Nov. 14, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+             <tr>
+                <td class="center-col">51</td>
+                <td>Administrative Officer II.</td>
+                <td>OSEC-DECSB-ADOF2-270274-2016</td>
+                <td>11</td>
+                <td>PHP 25,439.00 (NBC 588)</td>
+                <td>DepEd Division of Biñan City (Elementary & Senior High School)</td>
+                <td>Aug. 2, 2022, 3:53pm</td>
+                <td>Aug. 8, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">52</td>
+                <td>Administrative Assistant II.</td>
+                <td>OSEC-DECSB-ADOF2-270210-2016</td>
+                <td>11</td>
+                <td>PHP 25,439.00 (NBC 588)</td>
+                <td>DepEd Division of Biñan City (Elementary)</td>
+                <td>June 17, 2022, 1:25pm</td>
+                <td>June 30, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">53</td>
+                <td>Administrative Assistant II.</td>
+                <td>OSEC-DECSB-ADAS2-270089-2018 And OSEC-DECSB-ADAS2-280115-2017</td>
+                <td>8</td>
+                <td>PHP 18,998.00 (NBC 588)</td>
+                <td>DepEd - Division of Biñan City (Biñan Integrated National High School and Biñan Elementary School)</td>
+                <td>June 17, 2022, 1:17pm</td>
+                <td>June 30, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">54</td>
+                <td>Administrative Aide - VI.</td>
+                <td>OSEC-DECSB-ADA6-270015-2016 And OSEC-DECSB-ADA6-270020-2016</td>
+                <td>6</td>
+                <td>Php 16,200 (Salary Grade Table 2021)</td>
+                <td>Department of Education - Division of Biñan City - Division Office (Division Personnel Unit & Division Office of the Schools Division Superintendent)</td>
+                <td>Dec. 21, 2021, 8:00am</td>
+                <td>Jan. 5, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">55</td>
+                <td>Medical Officer - III.</td>
+                <td>OSEC-DECSB-MDOF3-270027-2017</td>
+                <td>21</td>
+                <td>Php 60,901 (Salary Grade Table 2021)</td>
+                <td>Department of Education - Division of Biñan City - Division Office (SGOD)</td>
+                <td>Dec. 21, 2021, 8:00am</td>
+                <td>Jan. 5, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+             <tr>
+                <td class="center-col">56</td>
+                <td>Attorney - III.</td>
+                <td>OSEC-DECSB-ATY3-270034-2016</td>
+                <td>21</td>
+                <td>Php 60,901 (Salary Grade Table 2021)</td>
+                <td>Department of Education - Division of Biñan City - Division Office (Division Office of the Schools Division Superintendent)</td>
+                <td>Dec. 21, 2021, 8:00am</td>
+                <td>Jan. 5, 2022, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">57</td>
+                <td>Security Guard - I.</td>
+                <td>OSEC-DECSB-SECG1-240006-2002</td>
+                <td>3</td>
+                <td>Php 13,572 (Salary Grade Table 2021)</td>
+                <td>Department of Education - Division of Biñan City - Jacobo Z. Gonzales Memorial National High School</td>
+                <td>Oct. 25, 2021, 8:00am</td>
+                <td>Nov. 8, 2021, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">58</td>
+                <td>Administrative Officer - II.</td>
+                <td>OSEC-DECSB--ADOF2-270161-2021 And OSEC-DECSB--ADOF2-270162-2021</td>
+                <td>11</td>
+                <td>Php 23,877 (Salary Grade Table 2021)</td>
+                <td>Department of Education - Division of Biñan City (Pedro H. Escueta Elementary School and Tubigan Elementary School)</td>
+                <td>Oct. 25, 2021, 8:00am</td>
+                <td>Nov. 8, 2021, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <tr>
+                <td class="center-col">59</td>
+                <td>Teacher - III.</td>
+                <td>OSEC-DECSB-TCH3-270713-2016</td>
+                <td>13</td>
+                <td>Php 28,276 (Salary Grade Table 2021)</td>
+                <td>Department of Education - Division of Biñan City (Senior High School)</td>
+                <td>Oct. 25, 2021, 8:00am</td>
+                <td>Nov. 8, 2021, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+           <tr>
+                <td class="center-col">60</td>
+                <td>Master Teacher - I.</td>
+                <td>OSEC-DECSB--MTCHR1-270296-2016 And OSEC-DECSB--MTCHR1-270297-2016</td>
+                <td>18</td>
+                <td>Php 43,681 (Salary Grade Table 2021)</td>
+                <td>Department of Education - Division of Biñan City (Senior High School)</td>
+                <td>Oct. 25, 2021, 8:00am</td>
+                <td>Nov. 8, 2021, 5:00pm</td>
+                <td class="center-col"><a href="#" class="view-link" target="_blank">Preview</a></td>
+            </tr>
+            <!-- Add more rows as needed-->
+        </tbody>
+    </table>
+ </div>
+ </div>
+<footer>{% include 'footer.html' %}</footer>
+</body>
+</html>
