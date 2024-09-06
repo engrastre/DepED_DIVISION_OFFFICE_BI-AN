@@ -1,0 +1,105 @@
+.announcement-slideshow-container {
+           position: relative;
+            max-width: 100%;
+            height: 350px; /* Adjust this value to set the desired height */
+            margin-top: 10px;
+            overflow: hidden;
+            marin-bottom: -990px;
+        }
+
+        .slide {
+            display: none;
+            height: 100%; /* Ensures the slideshow fills its container */
+            width: 100%;
+        }
+
+        .slide img {
+            width: 100%; /* Ensure image fills the width of the container */
+            height: 100%; /* Ensure image fills the height of the container */
+            display: block;
+            margin: auto; /* Center image horizontally */
+        }
+
+        /* Navigation Buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+<div class="slideshow_and_embedFB_container">
+            <!-- Announcement Slideshow Section -->
+            <div class="announcement-slideshow-container">
+                <div class="slide announcement-slide fade">
+                    <a href="{% static 'images/national.jpg' %}" data-lightbox="announcement">
+                        <img src="{% static 'images/national.jpg' %}">
+                    </a>
+                </div>
+                <div class="slide announcement-slide fade">
+                    <a href="{% static 'images/pasok.jfif' %}" data-lightbox="announcement">
+                        <img src="{% static 'images/pasok.jfif' %}">
+                    </a>
+                </div>
+                <div class="slide announcement-slide fade">
+                    <a href="{% static 'images/announcement.jfif' %}" data-lightbox="announcement">
+                        <img src="{% static 'images/announcement.jfif' %}">
+                    </a>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <a class="prev" onclick="plusSlides(-1, 'announcement')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'announcement')">&#10095;</a>
+            </div>
+
+
+
+
+              // Initialize slide indices for both slideshows
+        let slideIndex = {
+            main: 0,
+            announcement: 0
+        };
+
+        function showSlides(slideshowClass, type) {
+            let slides = document.getElementsByClassName(slideshowClass);
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex[type]++;
+            if (slideIndex[type] > slides.length) {
+                slideIndex[type] = 1;
+            }
+            slides[slideIndex[type] - 1].style.display = "block";
+            setTimeout(() => showSlides(slideshowClass, type), 3000); // Change slide every 3 seconds
+        }
+
+        function plusSlides(n, type) {
+            let slideshowClass = type === 'main' ? 'main-slide' : 'announcement-slide';
+            let slides = document.getElementsByClassName(slideshowClass);
+            slideIndex[type] += n;
+            if (slideIndex[type] > slides.length) { slideIndex[type] = 1 }
+            if (slideIndex[type] < 1) { slideIndex[type] = slides.length }
+            showSlides(slideshowClass, type);
+        }
+
+        // Start both slideshows
+        showSlides('main-slide', 'main');
+        showSlides('announcement-slide', 'announcement');
