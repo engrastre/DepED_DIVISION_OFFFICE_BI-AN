@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Quarter 1
+{% endblock %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Navigation</title>
+    <style>
+        .container {
+            display: flex;
+            margin: 0 auto;
+            padding: 10px;
+            max-width: 1200px;
+        }
+
+        .side-nav {
+            width: 250px; /* Adjusted width */
+            height: 280px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            font-family: 'Aptos', sans-serif;
+            margin-right: 20px; /* Space between the side navigation and the content */
+            margin-left: -200px;
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .side-nav li {
+            margin-bottom: 15px;
+        }
+
+        .side-nav li:first-child {
+            font-weight: bold;
+            font-size: 18px; /* Adjust font size for the title */
+            margin-bottom: 10px;
+        }
+
+        .side-nav a {
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 16px;
+        }
+
+        .side-nav a:hover {
+            color: #002a80;
+            text-decoration: underline;
+        }
+
+        .list-group {
+            flex-grow: 1; /* Take the remaining space */
+        }
+
+        .table-container {
+            margin-top: 20px;
+        }
+
+        table {
+              width: 100%; /* or a fixed width like 800px */
+              max-width: 800px; /* Adjust this value as needed */
+              border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+         .link-column {
+        width: 200%; /* Adjust this percentage as needed */
+    }
+
+    .grade-column {
+        width: 200%; /* Adjust this percentage as needed */
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="side-nav">
+        <h2><b>About</b></h2>
+        <p class="mb-0">This Page contains Self Learning Modules that is developed to support Modular Distance Learning</p>
+        <ul>
+            <li><a href="https://sites.google.com/deped.gov.ph/depedtv-program-grid?fbclid=IwAR2Jw-BPCSwXnZ5JrEJ1SWSHM3j7ZK9g7QeFiGb0stVBHIc5WSHXnPytWbU">
+                <img style="width:20px; height:20px;" src="{% static 'images/external.png' %}" alt="DepEd TV Programs">&nbsp; DepEd TV Programs</a></li>
+            <li><a href="{% url 'main:LR' %}">
+                <img style="width:20px; height:20px;" src="{% static 'images/external.png' %}" alt="Main Quarter">&nbsp; Main Quarter</a></li>
+            <li><a href="{% url 'main:Q1' %}">
+                <img style="width:20px; height:20px;" src="{% static 'images/external.png' %}" alt="Quarter 1 SLMS">&nbsp; Quarter 1 SLMS</a></li>
+            <li><a href="{% url 'main:Q2' %}">
+                <img style="width:20px; height:20px;" src="{% static 'images/external.png' %}" alt="Quarter 2 SLMS">&nbsp; Quarter 2 SLMS</a></li>
+        </ul>
+    </div>
+
+    <div class="list-group">
+        <h3>QUARTER 1</h3>
+        <div class="table-container">
+            <table>
+                <tr>
+                     <th style="width:800px;">Grade Level</th>
+
+                    <th style="width:80px;">Link</th>
+
+                </tr>
+                <tr>
+
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Kinder">&nbsp; Kinder</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1WmPpiDojfTyZk1Ok2pgaS6lL_RPFYHXY#grid">Kinder</a></td>
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 1">&nbsp; Grade 1</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1MzZjhcbVXrHwM1bTRv2OkEzMTZKGthxV#grid">Grade 1</a></td>
+
+                </tr>
+                <tr>
+                      <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 2">&nbsp; Grade 2</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=10RljL7fmEfMYOYuebXV6FyxkjbJpNx17#grid">Grade 2</a></td>
+
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 3">&nbsp; Grade 3</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=16LHbDn7RpQ8QsPEdaWzxRY0URowUI7ew#grid">Grade 3</a></td>
+
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 4">&nbsp; Grade 4</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1egj3_vSv_p8xcFosBkpkDuGnVppylW9n#grid">Grade 4</a></td>
+
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 5">&nbsp; Grade 5</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1EPgj7l-RjQlyZdap278OKMXvEureHSnz#grid">Grade 5</a></td>
+
+                </tr>
+                <tr>
+                     <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 6">&nbsp; Grade 6</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1Hn_sfKDx26tmCAcfcjRNSHeVcY4lyfZ3#grid">Grade 6</a></td>
+
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 7">&nbsp; Grade 7</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1cBrVyVlZldgr5Dkosqngyns2z6YReFgU#grid">Grade 7</a></td>
+
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 8">&nbsp; Grade 8</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1_KSMSmMs4ndSD2-IV4kf1bJQGviCX1vl#grid">Grade 8</a></td>
+
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 9">&nbsp; Grade 9</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1c3vylVoll5y0i50cTDqNKxpTk1OBOtDB#grid">Grade 9</a></td>
+
+                </tr>
+                <tr>
+                     <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 10">&nbsp; Grade 10</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1WFbhjz3hFrqwV_ehPIRKJQiyns2nHmST#grid">Grade 10</a></td>
+
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 11">&nbsp; Grade 11</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1a7W4uz0m-k-NETPY2qAF13JSdvpkr833#grid">Grade 11</a></td>
+
+                </tr>
+                <tr>
+                    <td><img style="width:20px; height:20px;" src="{% static 'images/folder1.png' %}" alt="Grade 12">&nbsp; Grade 12</td>
+                    <td><a href="https://drive.google.com/embeddedfolderview?id=1uKmASqx3G_x9q04vzNslrO0zvX3zi8Sg#grid">Grade 12</a></td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
