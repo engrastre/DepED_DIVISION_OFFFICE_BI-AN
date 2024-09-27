@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+{% load static  %}
+{% block title %}
+ Self Learning Modules
+{% endblock %}
+{% block content %}
+
+
+{% load static %}
+{% load static %}
+
+<head>
+    <title>Learning resources</title>
+     <style>
+        .container {
+          max-width: 3500px; /* Adjust the width to your preference */
+          margin: 0 auto; /* This centers the container */
+          padding-left: 0; /* Optional: Adds some padding to the left */
+          padding-right: 0; /* Optional: Adds some padding to the right */
+          transform-origin: 0 0; /* Ensures scaling happens from the top-left corner */
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+
+        .title {
+    text-align: center; /* Centers the title horizontally */
+    margin-top: 20px; /* Adds space above the title */
+    margin-bottom: 40px; /* Adds space below the title */
+}
+
+.title h1 {
+    font-size: 1.5em; /* Adjust the size of the text */
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+    color: #333; /* Title color */
+    text-transform: uppercase; /* Capitalizes all letters */
+    letter-spacing: 2px; /* Adds spacing between the letters */
+    font-weight: bold; /* Makes the title bold */
+    position: relative; /* Allows for pseudo-element styling */
+    margin-top: 20px;
+}
+
+.title h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #4fa49a; /* Color for the line underneath */
+    margin: 10px auto 0; /* Centers the line under the title */
+    border-radius: 2px; /* Slight rounding of the line */
+}
+
+
+   .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px;
+            transition: transform 0.3s ease;
+            /* Adjust card size here */
+            width: var(--card-width, 30%);
+            height: var(--card-height, auto);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 5px;
+            justify-content: center;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+
+        .card-description {
+            font-size: 1em;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .card-button {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(135deg, #4fa49a, #3f869b);
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+
+        .card-button {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(135deg, #4fa49a, #3f869b);
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+
+        }
+
+         .card-button:hover {
+            background: linear-gradient(135deg, #3f869b, #4fa49a);
+        }
+
+        @media (max-width: 1000px) {
+            .card {
+                width: var(--card-width-small, 45%);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .card {
+                width: var(--card-width-smallest, 100%);
+            }
+        }
+    </style>
+</head>
+
+
+ <!-- Existing content omitted for brevity -->
+<div class="title">
+    <h1>Self Learning Modules</h1>
+</div>
+
+
+
+    <div class="container">
+        <div class="card" style="--card-width: 20%; --card-height: 5%;">
+            <img src="{% static 'images/Q1.jpg' %}" alt="Quarter 1 Image">
+            <div class="card-content">
+                <h2 class="card-title">Quarter 1</h2>
+                <p class="card-description">This section contains Quarter 1 learning materials for Kinder to Grade 12.</p>
+                <a href="/Q1" class="card-button">View All</a>
+            </div>
+        </div>
+
+        <div class="card" style="--card-width: 20%; --card-height: 5%;">
+            <img src="{% static 'images/Q2.jpg' %}" alt="Quarter 2 Image">
+            <div class="card-content">
+                <h2 class="card-title">Quarter 2</h2>
+                <p class="card-description">This section contains Quarter 2 learning materials for Kinder to Grade 12.</p>
+                <a href="/Q2" class="card-button">View All</a>
+            </div>
+        </div>
+
+        <div class="card" style="--card-width: 20%; --card-height: 5%;">
+            <img src="{% static 'images/Q3.jpg' %}" alt="Quarter 3 Image">
+            <div class="card-content">
+                <h2 class="card-title">Quarter 3</h2>
+                <p class="card-description">This section contains Quarter 3 learning materials for Kinder to Grade 12.</p>
+                <a href="/Q3" class="card-button">View All</a>
+            </div>
+        </div>
+
+        <!-- Additional cards can be added similarly -->
+        <div class="card" style="--card-width: 20%; --card-height: 5%;">
+            <img src="{% static 'images/Q4.jpg' %}" alt="Quarter 3 Image">
+            <div class="card-content">
+                <h2 class="card-title">Quarter 4</h2>
+                <p class="card-description">This section contains Quarter 4 learning materials for Kinder to Grade 12.</p>
+                <a href="/Q4" class="card-button">View All</a>
+            </div>
+        </div>
+
+        <div class="card" style="--card-width: 20%; --card-height: 5%;">
+            <img src="{% static 'images/DLM.jpg' %}" alt="Quarter 3 Image">
+            <div class="card-content">
+                <h2 class="card-title">Division Learning Materials</h2>
+                <p class="card-description">This section contains Learning materials developed the Learning Resources Section.</p>
+                <a href="{% url 'main:dlm' %}" class="card-button">View All</a>
+            </div>
+        </div>
+
+        <div class="card" style="--card-width: 20%; --card-height: 5%;">
+            <img src="{% static 'images/ALS.jpg' %}" alt="Quarter 3 Image">
+            <div class="card-content">
+                <h2 class="card-title">ALS</h2>
+                <p class="card-description">This section contains Learning materials for Alternative Learning System Learners. </p>
+                <a href="#" class="card-button">View All</a>
+            </div>
+        </div>
+
+        <div class="card" style="--card-width: 20%; --card-height: 5%;">
+            <img src="{% static 'images/MADARASH.jpg' %}" alt="Quarter 3 Image">
+            <div class="card-content">
+                <h2 class="card-title">Madrasah</h2>
+                <p class="card-description">This section contains Learning materials specifically designed for Madrasah learners.</p>
+                <a href="#" class="card-button">View All</a>
+            </div>
+        </div>
+
+
+
+</div>
+
+{% endblock %}
